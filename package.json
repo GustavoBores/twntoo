@@ -1,0 +1,25 @@
+{
+  "name": "projeto12-tweteroo",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Rroject in Back End express",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "node ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoBores/twntoo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustavoBores/twntoo/issues"
+  },
+  "homepage": "https://github.com/GustavoBores/twntoo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

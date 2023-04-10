@@ -3,8 +3,62 @@ import cors from "cors"
 
 // Variables Globais in memory
 const tweets = [
-    {username: "bobesponja", tweet: "Eu amo hambúrguer de siri!"},
-    {username: "hello", tweet: "borboletas"}
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
+    {
+        username: "bobesponja",
+        tweet: "teste"
+    },
 ]
 
 const users = [
@@ -41,23 +95,25 @@ App.post("/sign-up", (req, res) => {
 })
 
 App.get("/tweets", (req, res) => {
-    const catchIndexTeen = tweets.filter((tweet, index) => {
-        if ( index < 10 ) {
-            return tweet
-        }
-    })
+    if ( tweets.length != 0 ) {
+        const catchIndexTeen = tweets.filter((tweet, index) => index < 10)
+    
+        const addAvatar = catchIndexTeen.map(tweet => {
+            let cacthUser = users.find(user => user.username === tweet.username)
+    
+            return {
+                username: tweet.username,
+                tweet: tweet.tweet,
+                avatar: cacthUser.avatar
+            }
+        })
 
-    const addAvatar = catchIndexTeen.map(tweet => {
-        let cacthUser = users.find(user => user.username === tweet.username)
-
-        return {
-            username: tweet.username,
-            tweet: tweet.tweet,
-            avatar: cacthUser.avatar
-        }
-    })
-
-    res.status(200).send("ok")
+        res.status(200).send(addAvatar)
+        
+    }else {
+        res.status(200).send(tweets)
+    }
+    
 })
 
 App.post("/tweets", (req, res) => {

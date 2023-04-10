@@ -2,64 +2,7 @@ import express from "express"
 import cors from "cors"
 
 // Variables Globais in memory
-const tweets = [
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-    {
-        username: "bobesponja",
-        tweet: "teste"
-    },
-]
+const tweets = []
 
 const users = [
     {
